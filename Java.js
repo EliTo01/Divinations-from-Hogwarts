@@ -153,8 +153,8 @@ ctx.font = `${fontAdjustment}px Arial`;
 ctx.fillStyle = '#444';  // Text color
 
 // Call the wrapText function to display the message
-const maxWidth = messageCanvas.width * 0.9; // Use 90% of the canvas width
-const lineHeight = 25;                      // Line height in pixels
+const maxWidth = messageCanvas.width -20; // Use 90% of the canvas width
+const lineHeight = 24;                      // Line height in pixels
 const x = 20;                               // Horizontal padding
 const y = 60;                               // Vertical start point
 
@@ -163,6 +163,8 @@ wrapText(ctx, randomMessage, x, y, maxWidth, lineHeight);
     function wrapText(context, text, x, y, maxWidth, lineHeight) {
   const words = text.split(' ');
   let line = '';
+  const maxHeight =
+      context.canvas.height - 20;
 
   for (let i = 0; i < words.length; i++) {
     const testLine = line + words[i] + ' ';
@@ -172,6 +174,9 @@ wrapText(ctx, randomMessage, x, y, maxWidth, lineHeight);
       context.fillText(line, x, y); // Draw the line on the canvas
       line = words[i] + ' ';       // Start a new line
       y += lineHeight;             // Move to the next line height
+        if (y + lineHeight > maxHeight) {
+            break;
+        }
     } else {
       line = testLine;
     }
