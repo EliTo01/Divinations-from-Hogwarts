@@ -135,7 +135,41 @@ document.getElementById('getMessageButton').addEventListener('click', function (
     // Randomly select a message
     const randomMessage = languageMessages[Math.floor(Math.random() * languageMessages.length)];
 
-    // Display the message in the canvas
-    const messageCanvas = document.getElementById('messageCanvas');
-    messageCanvas.textContent = randomMessage;
+   const messageCanvas = document.getElementById('messageCanvas');
+const ctx = messageCanvas.getContext('2d');
+
+// Clear the canvas before drawing a new message
+ctx.clearRect(0, 0, messageCanvas.width, messageCanvas.height);
+
+// Set the text properties
+ctx.font = '16px Arial'; // Adjust font size and style as needed
+ctx.fillStyle = '#444';  // Text color
+
+// Call the wrapText function to display the message
+const maxWidth = messageCanvas.width * 0.9; // Use 90% of the canvas width
+const lineHeight = 25;                      // Line height in pixels
+const x = 10;                               // Horizontal padding
+const y = 30;                               // Vertical start point
+
+wrapText(ctx, randomMessage, x, y, maxWidth, lineHeight);
+
+    function wrapText(context, text, x, y, maxWidth, lineHeight) {
+  const words = text.split(' ');
+  let line = '';
+
+  for (let i = 0; i < words.length; i++) {
+    const testLine = line + words[i] + ' ';
+    const testWidth = context.measureText(testLine).width;
+
+    if (testWidth > maxWidth && i > 0) {
+      context.fillText(line, x, y); // Draw the line on the canvas
+      line = words[i] + ' ';       // Start a new line
+      y += lineHeight;             // Move to the next line height
+    } else {
+      line = testLine;
+    }
+  }
+  context.fillText(line, x, y); // Draw the last line
+}
+
 });
