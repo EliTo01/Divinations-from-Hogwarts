@@ -44,9 +44,10 @@ h1 {
 /* Message Canvas */
 #messageCanvas {
     width: 80%;
-    height: 150px;
+    max-width: 100%;
+    height: auto;
     margin: 20px auto;
-    border: 2px dashed #665;
+    border: 2px dashed #666;
     display: flex;
     justify-content: center;
     align-items: center;
