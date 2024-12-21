@@ -148,8 +148,8 @@ ctx.fillStyle = '#444';  // Text color
 // Call the wrapText function to display the message
 const maxWidth = messageCanvas.width * 0.9; // Use 90% of the canvas width
 const lineHeight = 25;                      // Line height in pixels
-const x = 20;                               // Horizontal padding
-const y = 60;                               // Vertical start point
+const x = 50;                               // Horizontal padding
+const y = 150;                               // Vertical start point
 
 wrapText(ctx, randomMessage, x, y, maxWidth, lineHeight);
 
