@@ -141,7 +141,7 @@ const ctx = messageCanvas.getContext('2d');
 ctx.clearRect(0, 0, messageCanvas.width, messageCanvas.height);
 
 // Dynamically adjust font size based on the message length
-const baseFontSize = 18; // Default font size
+const baseFontSize = 16; // Default font size
 const maxFontSize = 20;  // Maximum font size
 const minFontSize = 8;  // Minimum font size
 const fontAdjustment = Math.max(
