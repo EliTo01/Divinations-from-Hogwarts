@@ -19,7 +19,7 @@ document.getElementById('getMessageButton').addEventListener('click', function()
 "When the world shoves you around, you just gotta stand up and shove back. It's not like somebody's gonna save you if you start babbling excuses.",
 "Miracles only happen to those who never give up!",
 "If you don't take risks, you can't create a future!",
-"The world isn’t perfect. But it’s there for us, doing the best it can… that’s what makes it so damn beautiful.",
+"The world isn’t perfect. But it’s there for us, doing the best it can… that’s what makes it so beautiful.",
 "Knowing what it feels like to be in pain, is exactly why we try to be kind to others.",
 "Whether a fish lives in a clear stream or a water ditch, so long as it continues swimming forward, it will grow up beautifully.",
 "An apple a day keeps anyone away if you throw it hard enough!",
@@ -93,7 +93,6 @@ document.getElementById('getMessageButton').addEventListener('click', function()
 "Δεν έφτασες ως εδώ με το να τα παρατήσεις, έτσι δεν είναι; Σωστά. Έχεις κάτι που λέγεται 'αποφασιστικότητα'. Όσο λοιπόν αντέχεις, όσο πράττεις αυτό που έχεις μέσα στην καρδιά σου, πιστεύω ότι μπορείς να κάνεις το σωστό.",
 "ΝΙΕΧΕΧΕΧΕΧΕΧΕ!",
 "γρήγορα, κρύψου πίσω από μια βολικά διαμορφωμένη λάμπα.",
-"Τι όμορφο Duwang! (νομ νομ) Δεν πρέπει να υπάρχει άλλο μέρος όσο όμορφο είναι αυτή η πόλη.",
 "👎︎︎♋︎❒︎🙵 ♎︎♋︎❒︎🙵♏︎❒︎ ⍓︎♏︎⧫︎ ♎︎♋︎❒︎🙵♏︎❒︎ ⧫︎♒︎♏︎ ♎︎♋︎❒︎🙵■︎♏︎⬧︎⬧︎ 🙵♏︎♏︎◻︎⬧︎ ♑︎❒︎□︎⬥︎♓︎■︎♑︎ ⧫︎♒︎♏︎ ⬧︎♒︎♋︎♎︎□︎⬥︎⬧︎ ♍︎◆︎⧫︎⧫︎♓︎■︎♑︎ ♎︎♏︎♏︎◻︎♏︎❒︎.",
 "Πρόσεχε τον άνδρα που μιλά με τα χέρια.",
 "ΠΙΣΤΕΥΩ ΣΕ ΣΕΝΑ! ΜΠΟΡΕΙΣ ΝΑ ΤΑ ΚΑΤΑΦΕΡΕΙΣ ΚΑΙ ΛΙΓΟ ΚΑΛΥΤΕΡΑ! ΑΚΌΜΑ ΚΙ ΑΝ ΔΕΝ ΤΟ ΠΙΣΤΕΥΕΙΣ! ΣΤΟ... ΣΤΟ ΥΠΟΣΧΟΜΑΙ...",
@@ -142,8 +141,8 @@ const ctx = messageCanvas.getContext('2d');
 ctx.clearRect(0, 0, messageCanvas.width, messageCanvas.height);
 
 // Dynamically adjust font size based on the message length
-const baseFontSize = 16; // Default font size
-const maxFontSize = 18;  // Maximum font size
+const baseFontSize = 18; // Default font size
+const maxFontSize = 20;  // Maximum font size
 const minFontSize = 8;  // Minimum font size
 const fontAdjustment = Math.max(
   minFontSize,
@@ -154,7 +153,7 @@ ctx.fillStyle = '#444';  // Text color
 
 // Call the wrapText function to display the message
 const maxWidth = messageCanvas.width - 20; // Use 90% of the canvas width
-const lineHeight = 14;                      // Line height in pixels
+const lineHeight = 16;                      // Line height in pixels
 const x = 20;                               // Horizontal padding
 const y = 60;                               // Vertical start point
 
