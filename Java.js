@@ -143,7 +143,7 @@ ctx.clearRect(0, 0, messageCanvas.width, messageCanvas.height);
 
 // Dynamically adjust font size based on the message length
 const baseFontSize = 12; // Default font size
-const maxFontSize = 20;  // Maximum font size
+const maxFontSize = 16;  // Maximum font size
 const minFontSize = 8;  // Minimum font size
 const fontAdjustment = Math.max(
   minFontSize,
@@ -153,8 +153,8 @@ ctx.font = `${fontAdjustment}px Arial`;
 ctx.fillStyle = '#444';  // Text color
 
 // Call the wrapText function to display the message
-const maxWidth = messageCanvas.width -20; // Use 90% of the canvas width
-const lineHeight = 24;                      // Line height in pixels
+const maxWidth = messageCanvas.width - 20; // Use 90% of the canvas width
+const lineHeight = 12;                      // Line height in pixels
 const x = 20;                               // Horizontal padding
 const y = 60;                               // Vertical start point
 
